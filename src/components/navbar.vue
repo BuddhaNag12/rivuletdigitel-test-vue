@@ -17,6 +17,9 @@
             <b-dropdown-item v-if="user" @click="logOut"
               >logout</b-dropdown-item
             >
+            <b-dropdown-item v-else @click="logOut"
+              >login</b-dropdown-item
+            >
           </b-nav-item-dropdown>
         </b-navbar-nav>
       </b-collapse>

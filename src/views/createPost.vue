@@ -38,7 +38,7 @@
       </b-overlay>
       <b-overlay :show="loading" rounded="sm">
         <b-card style="max-width: 40rem" class="mx-auto">
-          <h1 class="display-4">ALL Posts</h1>
+          <h1 class="display-4">ALL Local Posts</h1>
 
           <div v-for="(item,index) in localPosts" :key="item.userId">
             <b-row>
@@ -81,7 +81,11 @@ export default {
       loading: "isLoading",
       added: "added",
       localPosts: "getLocalPosts",
+      isLoggedIn:'isLoggedIn'
     }),
+  },
+  mounted(){
+    !this.isLoggedIn ? this.$router.push('/auth') :null
   },
   methods: {
     onSubmit(event) {

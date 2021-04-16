@@ -12,8 +12,8 @@
       <div>
         <b-list-group>
           <b-overlay :show="loading" rounded="sm">
-            <b-card style="max-width: 40rem" class="mx-auto">
-              <h1 class="display-4">ALL Posts</h1>
+            <b-card style="max-width: 40rem" class="mx-auto mt-2">
+              <h1 class="text-center text-uppercase">ALL Posts from api</h1>
 
               <div v-for="item in getAllPosts" :key="item.id">
                 <b-row>
